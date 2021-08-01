@@ -19,7 +19,7 @@ getMovies(url);
 
 const main = document.querySelector(".main");
 const form = document.querySelector("form");
-const input = document.queryCommandEnabled("#search");
+const input = document.querySelector("#search");
 //render function
 
 function renderMovies(movies) {
@@ -59,3 +59,13 @@ function getScoreClass(score) {
     return "red";
   }
 }
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const serachValue = input.value.trim();
+  if (serachValue && serachValue != " ") {
+    getMovies(searchUrl + serachValue);
+    serachValue = "";
+  } else {
+    window.location.reload();
+  }
+});
