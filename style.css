@@ -78,3 +78,12 @@ header {
 .movie:hover .overview {
   transform: translateY(0%);
 }
+.movie-info span.green {
+  color: green;
+}
+.movie-info span.orange {
+  color: orange;
+}
+.movie-info span.red {
+  color: red;
+}
